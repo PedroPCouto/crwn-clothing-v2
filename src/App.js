@@ -1,43 +1,38 @@
-const App = () => {
+import Directory from './components/directory/directory.component';
+
+const App = () =>{
+  const categoriesList = [
+    {
+      "id": 1,
+      "name": "hats",
+      "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+    },
+    {
+      "id": 2,
+      "name": "jackets",
+      "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+    },
+    {
+      "id": 3,
+      "name": "sneakers",
+      "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+    },
+    {
+      "id": 4,
+      "name": "womens",
+      "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+    },
+    {
+      "id": 5,
+      "name": "mens",
+      "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+    }
+  ]
+  ;
+
   return (
-    <div className='categories-container'>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Hats</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Jackets</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Sneakers</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Womens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Mens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-    </div>
+    <Directory Categories={categoriesList}/>
   );
-};
+}
 
 export default App;
