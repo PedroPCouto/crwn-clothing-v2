@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FormInput } from "../form-input/form-input.component";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firabse.utils";
-
+import './sign-up.styles.scss';
+import { Button } from "../button/button.component";
 
 const dafultFormFields = {
     displayName:'',
@@ -45,14 +46,15 @@ export const SignUpForm = () => {
     }
     const [formFields, setFormFields] = useState(dafultFormFields);
     return (
-        <div>
-            <h1>Sign up with your email and password</h1>
+        <div className="sign-up-container">
+            <h2>Don't have an account?</h2>
+            <span>Sign up with your email and password</span>
             <form onSubmit={createAuthUser}>
                 <FormInput label="Display Name" type="text" id="display-name"/>
                 <FormInput label="Email" type="email" id="email"/>
                 <FormInput label="Password"type="password" id="password"/>
                 <FormInput label="Confirm Password" type="password" id="confirm-password" onChange={passwordVerification}/>
-                <button type="submit" id="signUp-submit">Sign Up</button>
+                <Button type="submit" id="signUp-submit" children="Sign In" />
             </form>
         </div>
     )
