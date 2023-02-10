@@ -46,7 +46,7 @@ export const SignUpForm = () => {
     const [formFields, setFormFields] = useState(dafultFormFields);
     return (
         <div>
-            <h1>Sign up with ypur email and password</h1>
+            <h1>Sign up with your email and password</h1>
             <form onSubmit={createAuthUser}>
                 <FormInput label="Display Name" type="text" id="display-name"/>
                 <FormInput label="Email" type="email" id="email"/>
